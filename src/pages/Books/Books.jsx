@@ -1,6 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react';
 import Book from '../Book/Book';
-import { data } from 'react-router';
 
 
 const Books = () => {
