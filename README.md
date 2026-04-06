@@ -2,6 +2,10 @@
 
 This is a web application for book lovers to discover new books, read them, and see what others are reading.
 
+## Live Demo
+
+Check out the live application here: [https://bookvibe001.netlify.app/](https://bookvibe001.netlify.app/)
+
 ## Features
 
 - View a list of books
@@ -18,6 +22,9 @@ This is a web application for book lovers to discover new books, read them, and 
 - **React Router**: For routing and navigation.
 - **Tailwind CSS**: A utility-first CSS framework.
 - **DaisyUI**: A component library for Tailwind CSS.
+- **React Tabs**: For creating tabbed interfaces to switch between read and wish lists.
+- **React Hot Toast**: For displaying notifications and toast messages to users.
+- **React Icons**: A library providing a collection of popular icons.
 
 
 ## Available Scripts
