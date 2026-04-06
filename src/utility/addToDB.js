@@ -1,6 +1,6 @@
+import { toast } from 'react-hot-toast';
 
-
-const getStoeredBooks = () => {
+const getReadList = () => {
     const storedBooks = localStorage.getItem('readList');
 
     if(storedBooks){
@@ -12,18 +12,45 @@ const getStoeredBooks = () => {
     }
 }
 
-const addToStoredBooks = (id) => {
+const addToReadList = (id) => {
 
-    const storedBooks = getStoeredBooks();
+    const storedBooks = getReadList();
 
     if(storedBooks.includes(id)){
-        alert('Book already marked as read');
+        toast.error('Book already marked as read');
     }
     else{
         storedBooks.push(id);
         localStorage.setItem('readList', JSON.stringify(storedBooks));  
+        toast.success('Book marked as read');
     }
    // console.log(storedBooks);
 }
 
-export { addToStoredBooks }
+const getWishList = () => {
+    const storedBooks = localStorage.getItem('wishList');
+
+    if(storedBooks){
+        const storedBookList = JSON.parse(storedBooks);
+        return storedBookList;
+    }
+    else{
+        return [];
+    }
+}
+
+const addToWishList = (id) => {
+
+    const storedBooks = getWishList();
+
+    if(storedBooks.includes(id)){
+        toast.error('Book already in wishlist');
+    }
+    else{
+        storedBooks.push(id);
+        localStorage.setItem('wishList', JSON.stringify(storedBooks));
+        toast.success('Book added to wishlist');
+    }
+}
+
+export { getReadList, addToReadList, getWishList, addToWishList }
